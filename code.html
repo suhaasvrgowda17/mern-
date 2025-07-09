@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <div class="loading" id="loading">Loading weather data...</div>
+        <section class="weather-card" aria-live="polite">
+            <div class="search-container">
+                <input type="text" id="city-input" placeholder="Enter city name">
+                <button id="search-button">🔍 Search</button>
+            </div>
+            <h1 class="city-name">Weather in <span id="city">City</span></h1>
+            <article class="weather-info">
+                <figure class="weather-icon-container">
+                    <img id="weather-icon" src="" alt="Current weather condition" loading="lazy" src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/212f32db-812f-4de6-b107-6f6e754ce609.png">
+                    <figcaption id="weather-description" class="weather-description">Loading weather data...</figcaption>
+                </figure>
+                <div class="temp-container">
+                    <p class="temperature" id="temperature">-- °C</p>
+                    <p class="feels-like" id="feels-like">Feels like: -- °C</p>
+                </div>
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <span>💧</span>
+                        <p id="humidity">--%</p>
+                    </div>
+                    <div class="detail-item">
+                        <span>🌬️</span>
+                        <p id="wind-speed">-- m/s</p>
+                    </div>
+                    <div class="detail-item">
+                        <span>🌡️</span>
+                        <p id="pressure">-- hPa</p>
+                    </div>
+                </div>
+            </article>
+            <div class="last-updated">
+                <small id="last-updated">Last updated: --</small>
+            </div>
+            <button id="refresh-button">🔄 Refresh</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
